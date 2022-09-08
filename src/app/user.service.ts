@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class UserService {
 
   constructor(private http: HttpClient,) { }
-  private usersUrl = 'http://127.0.0.1:55187/users';
+  private usersUrl = 'http://localhost:62914/api/users';
 
   getHeroes(): Observable<User[]> {
     return this.http.get<User[]>(this.usersUrl)
