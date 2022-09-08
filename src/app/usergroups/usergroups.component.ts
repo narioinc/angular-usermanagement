@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Usergroup} from '../models/usergroup.model'
-
-const USERGROUP_DATA: Usergroup[] = [
-  {id: "1", groupName: "group1", groupDescription: "group1 description"},
-  {id: "2", groupName: "group2", groupDescription: "group2 description"},
-  {id: "3", groupName: "group3", groupDescription: "group3 description"},
-  {id: "4", groupName: "group4", groupDescription: "group4 description"},
-];
+import { UsergroupService } from '../usergroup.service';
 
 @Component({
   selector: 'app-usergroups',
@@ -15,11 +9,15 @@ const USERGROUP_DATA: Usergroup[] = [
 })
 export class UsergroupsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usergroupService: UsergroupService) { }
   displayedColumns: string[] = ['no', 'id', 'groupName', 'groupDescription'];
-  dataSource = USERGROUP_DATA;
+  //dataSource = USERGROUP_DATA;
+  dataSource : Usergroup[] = []
 
   ngOnInit(): void {
+    this.usergroupService.getUsergroups().subscribe((data: Usergroup[]) => {
+      this.dataSource = data
+    });
   }
 
 }
