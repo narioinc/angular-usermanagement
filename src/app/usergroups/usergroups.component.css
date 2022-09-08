@@ -1,4 +1,8 @@
-.usergrouptable {
+.usergrouptablediv {
     width: 80%;
     margin: 5%
+}
+
+.usergrouptable {
+    width: 100%;
 }

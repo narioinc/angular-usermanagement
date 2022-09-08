@@ -14,6 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

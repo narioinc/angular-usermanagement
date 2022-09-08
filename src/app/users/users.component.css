@@ -1,4 +1,8 @@
 .usertable {
+    width: 100%;
+}
+
+.usertablediv {
     width: 80%;
     margin: 5%
 }
