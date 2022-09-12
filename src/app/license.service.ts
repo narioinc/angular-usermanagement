@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class LicenseService {
 
   constructor(private http: HttpClient,) { }
-  private licenseUrl = 'http://localhost:62914/api/license';
+  private licenseUrl = 'http://20.12.196.43/api/license';
 
   getLicenses(): Observable<License[]> {
     return this.http.get<License[]>(this.licenseUrl)

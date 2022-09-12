@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class UsergroupService {
 
   constructor(private http: HttpClient,) { }
-  private usergroupUrl = 'http://localhost:62914/api/usergroup';
+  private usergroupUrl = 'http://20.12.196.43/api/usergroup';
 
   getUsergroups(): Observable<Usergroup[]> {
     return this.http.get<Usergroup[]>(this.usergroupUrl)
